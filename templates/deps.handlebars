@@ -1,0 +1,79 @@
+<div class="overall-summary ">
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a href="#">
+        <span class="octicon octicon-package"></span>
+        <span class="num text-emphasized">
+          {{repo.dependency_count}}          
+        </span>
+        dependencies
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <span class="octicon octicon-alert"></span>
+        <span class="num text-emphasized">
+          {{repo.outdated_count}}          
+        </span>
+        out of date
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <span class="octicon octicon-flame"></span>
+        <span class="num text-emphasized">
+          {{repo.deprecated_count}}          
+        </span>
+        deprecated
+        </a>
+      </li>
+    </ul>
+    </div>
+  </div>
+</div>
+
+<div class="commit-tease js-details-container">
+  Dependencies Health
+</div>
+
+<div class="file-wrap">
+  <table class="files">
+    <tbody>
+      {{#each repo.dependencies}}
+      <tr class="js-navigation-item navigation-focus">
+        <td class="icon">
+          {{#if deprecated}}
+          <span class="octicon octicon-flame"></span>
+          {{else}}
+            {{#if outdated}}
+            <span class="octicon octicon-alert"></span>
+            {{else}}
+            <span class="octicon octicon-check"></span>
+            {{/if}}
+          {{/if}}
+        </td>
+        <td class="content">
+          <a href="https://libraries.io/{{platform}}/{{name}}">
+            {{name}}
+          </a>
+        </td>
+        <td class="message">
+          Required: <b>{{requirements}}</b>
+        </td>
+        <td>
+          {{#if outdated}}
+            Latest: <b>{{latest_stable}}</b>
+          {{/if}}
+        </td>
+        <td class="age">
+          {{platform}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+<p>Powered by <a href="https://libraries.io">Libraries.io</a></p>

@@ -1,0 +1,16 @@
+{
+  "extends": "eslint:recommended",
+  "env": {
+    "es6": true,
+    "browser": true,
+    "webextensions: true
+  },
+  "ecmaFeatures": {
+    "modules": true,
+    "blockBindings": true,
+    "templateStrings": true,
+    "destructuring": true,
+    "classes": true,
+    "jsx": true
+  }
+}

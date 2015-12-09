@@ -1,0 +1,31 @@
+{
+  "name": "github_companion",
+  "version": "0.1.0",
+  "description": "Show dependency health as you browse.",
+  "main": "index.js",
+  "dependencies": {
+    "handlebars": "^4.0.5"
+  },
+  "devDependencies": {
+    "handlebars": "^4.0.5"
+  },
+  "scripts": {
+    "compile": "handlebars templates -f compiled-templates.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/librariesio/github_companion"
+  },
+  "keywords": [
+    "github",
+    "dependencies",
+    "extension"
+  ],
+  "author": "Mauro Pompilio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/librariesio/github_companion/issues"
+  },
+  "homepage": "https://github.com/librariesio/github_companion"
+}
