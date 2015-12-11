@@ -14,8 +14,6 @@ function getDependencies(response) {
 
   if (!repo.dependencies) return
 
-  console.debug(repo)
-
   repo.dependency_count = repo.dependencies.length
   repo.deprecated_count = repo.dependencies.filter( (d) => d.deprecated ).length
   repo.outdated_count   = repo.dependencies.filter( (d) => d.outdated ).length
